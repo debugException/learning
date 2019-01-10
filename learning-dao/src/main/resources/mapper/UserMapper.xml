@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ixuehui.learning.dao.mapper.UserMapper">
+    <resultMap id="user" type="cn.ixuehui.learning.dao.entity.User"/>
+    <parameterMap id="user" type="cn.ixuehui.learning.dao.entity.User"/>
+
+    <select id="getUserList" resultMap="user">
+        SELECT  id, username, password FROM h_bus_user
+    </select>
+</mapper>
